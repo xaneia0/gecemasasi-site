@@ -1,6 +1,6 @@
 <!doctype html><meta charset="utf-8"><title>aktar</title><body>aktarılıyor
 <script>
 (async()=>{const b=await (await fetch('vitrin.png')).arrayBuffer();
-window.opener.postMessage({ad:'GeceMasasi-vitrin.png',veri:b},'https://appstoreconnect.apple.com',[b]);
+(window.opener||window.parent).postMessage({ad:'GeceMasasi-vitrin.png',veri:b},'https://appstoreconnect.apple.com',[b]);
 document.body.textContent='tamam';})();
 </script>
