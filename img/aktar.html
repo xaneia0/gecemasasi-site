@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><title>aktar</title><body>
+<script>
+(async()=>{const q=new URLSearchParams(location.search);const ad=q.get('f')||'ref.jpg';const hedef=q.get('o')||'https://gemini.google.com';
+const b=await (await fetch(ad)).arrayBuffer();
+(window.opener||window.parent).postMessage({ad,veri:b},hedef,[b]);})();
+</script>
