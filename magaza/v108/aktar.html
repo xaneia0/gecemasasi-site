@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>aktar</title>
+<script>
+// Yalnız App Store Connect sayfasına, mağaza görsellerini ve metinleri iletmek için.
+const adlar=['metin.json','01-supheliler.jpg','02-yalan.jpg','03-olay-yeri.jpg','04-laboratuvar.jpg','05-savcilik.jpg','06-iddianame.jpg','07-birlikte.jpg','08-seviyeler.jpg'];
+(async()=>{for(const ad of adlar){const b=await (await fetch(ad+'?'+Date.now())).arrayBuffer();parent.postMessage({ad,veri:b},'https://appstoreconnect.apple.com');}
+parent.postMessage({ad:'bitti',veri:null},'https://appstoreconnect.apple.com');})();
+</script>
